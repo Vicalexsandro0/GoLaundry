@@ -18,6 +18,9 @@
         <a href="index.php">member</a>
         <a href="index.php">tentang kami</a>
     </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
     </section>
 </body>
 </html>
