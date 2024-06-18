@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;800;900&display=swap');
+
 :root{
-    --main-color : #2791ca;
+    --primary-color : #1996D9;
+    --secondary-color : #FDE400;
     --black : #222;
-    --white : #222;
+    --white : #fff;
     --light-black : #333;
     --dark-bg: rgba(0,0,0,.7);
     --light-bg: #eee;
@@ -36,7 +39,11 @@ html::-webkit-scrollbar-track{
 }
 
 html::-webkit-scrollbar-thumb{
-    background-color: var(--main-color);
+    background-color: var(--primary-color);
+}
+
+section{
+    padding: 5rem 10%;
 }
 
 .header{
@@ -45,7 +52,7 @@ html::-webkit-scrollbar-thumb{
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: var(--white);
+    background-color: var(--primary-color);
     display: flex;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -66,7 +73,7 @@ html::-webkit-scrollbar-thumb{
 }
 
 .header .navbar a:hover{
-    color: var(--main-color);
+    color: var(--secondary-color);
 }
 
 #menu-btn{
@@ -98,13 +105,18 @@ html::-webkit-scrollbar-thumb{
         font-size: 55%;
     }
     section{
-        padding: 3rem 5%;
+        padding: 3rem 2 rem;
     }
 }
 
 @media (max-width:768px){
     #menu-btn{
         display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
     }
 
     .header .navbar{
@@ -112,16 +124,17 @@ html::-webkit-scrollbar-thumb{
         top: 99%;
         left: 0;
         right: 0;
-        background-color: var(--white);
+        background-color: var(--main-color);
         border-top: var(--border);
         padding: 2rem;
-        clip-path: polygon(0 0, 100% 0,100% 0, 0 0);
+        transition: .2s;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
-    .header .navbar .active{
+    .header .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
-/* 15:50 */
+
     .header .navbar a{
         display: block;
         margin: 2rem;
