@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
 
 :root{
     --primary-color : #1996D9;
@@ -6,6 +7,7 @@
     --black : #222;
     --white : #fff;
     --light-black : #333;
+    --light-blue : #B4DFF6;
     --dark-bg: rgba(0,0,0,.7);
     --light-bg: #eee;
     --border:.1rem solid var(--black);
@@ -83,6 +85,72 @@ section{
     display: none;
 }
 
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .image{
+    flex: 1 1 41rem;
+}
+
+.about .image img{
+    width: 100%;
+}
+
+.about .content{
+    flex: 1 1 41rem;
+    padding: 3rem;
+    background: var(--light-blue);    
+}
+
+.about .content h3{
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.about .content p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 2;
+    color: var(--black);
+}
+
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+
+.head-title{
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.services .box-container .box{
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.services .box-container .box img{
+    height: 7rem;
+}
+
+.services .box-container .box h3{
+    color: var(--white);
+    font-size: 1.7rem;
+    padding-top: 1rem;
+}
+
+
+
+
 .footer{
     background-color: var(--primary-color);
 }
@@ -118,6 +186,15 @@ section{
 
 
 
+.footer .copyright{
+    text-align: left;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: .1rem solid var(--light-bg);
+    font-size: 2rem;
+    color: var(--white);
+}
+
 @media (max-width:1200px){
 
     section{
@@ -150,7 +227,7 @@ section{
         top: 99%;
         left: 0;
         right: 0;
-        background-color: var(--main-color);
+        background-color: var(--primary-color);
         border-top: var(--border);
         padding: 2rem;
         transition: .2s;
@@ -173,4 +250,9 @@ section{
     html{
         font-size: 50%;
     }
+
+    .head-title{
+        font-size: 3.5rem;
+    }
+    
 }
