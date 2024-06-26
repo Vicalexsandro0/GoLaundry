@@ -10,3 +10,20 @@ window.onscroll = () =>{
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
 }
+
+var swiper = new Swiper(".home-slider",{
+    loop:true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+    centeredSlides: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false
+  },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    }
+})
