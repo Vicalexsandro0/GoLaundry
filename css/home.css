@@ -125,7 +125,7 @@ section{
 .home .swiper-slide .content span{
     display: block;
     font-size: 2.2rem;
-    color: var(--light-bg);
+    color: var(--secondary-color);
     padding-bottom: 1rem;
 }
 
@@ -223,12 +223,11 @@ section{
 .operational-hours {
     background-color: #b3e5fc;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-    
 }
 
 .operational-hours h1 {
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-size: 4.5rem;
     text-align: center;
 }
@@ -263,14 +262,12 @@ section{
     font-size: 2rem ;
 }
 
-
-
 .work-process {
     margin: 2rem 0;
 }
 
 .work-process h1 {
-    font-size: 4.5rem;
+    font-size: 4.5rem;  
     color: var(--primary-color);
     margin-bottom: 1rem;
     text-align: center;
@@ -278,35 +275,65 @@ section{
 
 .steps {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.steps div {
-    text-align: center;
-}
-
-.steps div img {
-    height: 10rem;
-    margin: 0rem 10rem;
-}
-
-.steps div p {
-    margin-top: 0.5rem;
-    font-size: 3rem;
-    color: #0288d1;
-}
-
-.dashed-line {
-    border-top: 2px dashed #0288d1;
-    width: 80%;
+    justify-content: space-between;
+    align-items: center;  
     margin: 0 auto;
-    margin-top: 1rem;
+    width: 80%;  
+    position: relative;
 }
 
+.steps::before {
+    content:"";
+    position: absolute;
+    top: 41%;  
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    border-top: 0.2rem dashed #0288d1;
+    z-index: -1;
+}
 
+.steps .step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 0 1rem;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.steps .step img {
+    height: 7rem;  
+    margin-bottom: 1rem;
+}
+
+.steps .step p {
+    font-size: 1.5rem;  
+    color: #0288d1;
+    margin-top: 0.5rem;
+}
+
+.warning {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    background-color: var(--light-blue);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.warning h3{
+    margin: 4rem;
+}
+
+.warning p{
+    padding: 1rem 1rem;
+    background-color: var(--white); 
+    color: var(--primary-color);
+    margin-left: 35rem;
+    margin-right: 35rem;
+}
 
 .footer{
     background-color: var(--primary-color);

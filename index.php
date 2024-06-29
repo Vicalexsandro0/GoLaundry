@@ -32,8 +32,8 @@
 
                 <div class="swiper-slide" style="background:url(assets/foto/Header\ Page\ Utama.png) no-repeat">
                     <div class="content">
-                        <span></span>
-                        <h3>GoLaundry</h3>
+                        <span>F A S T & C L E A N</span>
+                        <h3>Go Laundry</h3>
                         <a href="harga.php" class="btn">pick up</a>
                         <a href="harga.php" class="btn">cek harga</a>
                     </div>
@@ -109,7 +109,7 @@
         <h1>Jam Operasional</h1>
         <div class="box-container">
             <div>
-                <span>&nbsp; Senin - Sabtu</span> <p>08.00 - 21.00</p>
+                <span>&nbsp; Senin - Sabtu &nbsp;</span> <p>08.00 - 21.00</p>
             </div>
             <div>
                 <span>&nbsp; Minggu &nbsp;</span> <p>08.00 - 15.00</p>
@@ -135,33 +135,39 @@
         </div>
     </section>
 
-    <div class="work-process">
+    <section class="work-process">
         <h1>Cara Kerja</h1>
         <div class="steps">
-            <div>
-                <img src="assets/icon/Laptop.png">
-                <div class="dashed-line"></div>
+            <div class="step">
+                <img src="assets/icon/Laptop.png" alt="Pesan">
                 <p>Pesan</p>
             </div>
-            <div>
-                <img src="assets/icon/Motor.png">
-                <div class="dashed-line"></div>
+            <div class="step">
+                <img src="assets/icon/Motor.png" alt="Jemput">
                 <p>Jemput</p>
             </div>
-            <div>
-                <img src="assets/icon/Mesin Cuci.png">
-                <div class="dashed-line"></div>
+            <div class="step">
+                <img src="assets/icon/Mesin Cuci.png" alt="Proses">
                 <p>Proses</p>
             </div>
-            <div>
-                <img src="assets/icon/Motor.png">
-                <div class="dashed-line"></div>
+            <div class="step">
+                <img src="assets/icon/Motor.png" alt="Antar">
                 <p>Antar</p>
             </div>
         </div>
+    </section>
         
     </div>
 
+    
+        <section class="warning">
+            <h3>PERINGATAN !!!</h3>
+            <p>Sebelum laundry diserahkan, pastikan TIDAK ADA BARANG </p>
+            <p>YANG KETINGGALAN di semua saku pakaian.</p>
+            <p>KAMI TIDAK BERTANGGUNG JAWAB:</p>
+            <p>Luntur - Sobek Bahan - Susut Bahan - Kerusakan Lainnya</p>
+        </section>
+    
 
 
     <section class="footer">
@@ -176,7 +182,7 @@
 
             <div class="box">
                 <h3>contact us</h3>
-                <a href="https://wa.me/628999826888"><i class="fab fa-instagram"></i>GoLaundryPtk</a>
+                <a href="https://www.instagram.com/golaundry.ptk/"><i class="fab fa-instagram"></i>GoLaundryPtk</a>
                 <a href="https://wa.me/628999826888"><i class="fas fa-phone"></i>+62-899-982-6888</a>
                 <a href="https://maps.app.goo.gl/PbD49EBBFokFCxwm7"><i class="fas fa-location-dot"></i>Jl. Budi Karya No. B3 </a>
             </div>
