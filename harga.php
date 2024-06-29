@@ -14,7 +14,6 @@
 }
 </style>
 <body>
-    <body></body>
         <section class="header">
     
         <a href="index.php" class = "logo"><img src="assets/Group 2.png" alt="GoLaundry"></a>
@@ -65,11 +64,14 @@
               <div>
                 <h1 class=box>Harga Promo</h1>
                 <ul>
+                  <p>minimal 3 kg</p>  
                   <li><span>Cuci</span><span>Rp. 1,900/Kg</span></li>
                   <li><span>Cuci Kering</span><span>Rp. 5,000/Kg</span></li>
                   <li><span>Cuci Komplit</span><span>Rp. 7,000/Kg</span></li>
+                  <p>express 24 jam</p>
                   <li><span>Cuci Kering (Express 6 Jam)</span><span>Rp. 10,000/Kg</span></li>
                   <li><span>Cuci Setrika (Express 6 Jam)</span><span>Rp. 13,000/Kg</span></li>
+                  <p>express 4 jam</p>
                   <li><span>Cuci Kering (Express 3 Jam)</span><span>Rp. 15,000/Kg</span></li>
                   <li><span>Cuci Setrika (Express 3 Jam)</span><span>Rp. 17,000/Kg</span></li>
                   <li><span>Gorden</span><span>Rp. 15,000/Kg</span></li>
@@ -86,5 +88,29 @@
               </div>
             </div>
           </section>
+          <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>menu</h3>
+                    <a href="index.php"><i class="fas fa-angle-right"></i>beranda</a>
+                    <a href="contact.php"><i class="fas fa-angle-right"></i>kontak</a>
+                    <a href="member.php"><i class="fas fa-angle-right"></i>member</a>
+                    <a href="about.php"><i class="fas fa-angle-right"></i>tentang kami</a>
+                </div>
+    
+                <div class="box">
+                    <h3>contact us</h3>
+                    <a href="https://www.instagram.com/golaundry.ptk/"><i class="fab fa-instagram"></i>GoLaundryPtk</a>
+                    <a href="https://wa.me/628999826888"><i class="fas fa-phone"></i>+62-899-982-6888</a>
+                    <a href="https://maps.app.goo.gl/PbD49EBBFokFCxwm7"><i class="fas fa-location-dot"></i>Jl. Budi Karya No. B3 </a>
+                </div>
+            </div>
+    
+            <div class="copyright">
+                <span>copyright &copy; Go Laundry</span>
+            </div>
+        </section>    
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

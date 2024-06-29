@@ -87,7 +87,6 @@ section {
 }
 
 .price {
-
     display: grid;
     grid-auto-flow: column;
     grid-gap: 2rem;
@@ -116,6 +115,14 @@ section {
     text-align: center;
 }
 
+.box-container:nth-child(1) {
+    grid-row: span 12;
+}
+.box-container:nth-child(2),
+.box-container:nth-child(3) {
+    grid-row: span 2;
+}
+
 .price .box-container div {
     background-color: var(--white);
     color: var(--primary-color);
@@ -137,19 +144,22 @@ section {
     padding: 0;
 }
 
+.price .box-container div ul p{
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(25,150,217,0.700717787114846) 58%, rgba(0,212,255,1) 100%);
+    padding: 0.5rem 1rem; 
+    font-size: 2rem; 
+    color: var(--white); 
+    border-radius: 2rem; 
+    margin-bottom: 0.5rem; 
+    text-align: right;
+}
+
 .price .box-container div ul li {
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 0;
 }
 
-.box-container:nth-child(1) {
-    grid-row: span 12;
-}
-.box-container:nth-child(2),
-.box-container:nth-child(3) {
-    grid-row: span 2;
-}
 
 
 .footer{
