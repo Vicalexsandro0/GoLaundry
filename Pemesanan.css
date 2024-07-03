@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+
+:root{
+    --primary-color : #1996D9;
+    --secondary-color : #FDE400;
+    --black : #222;
+    --white : #fff;
+    --light-black : #333;
+    --light-blue : #B4DFF6;
+    --dark-bg: rgba(0,0,0,.7);
+    --light-bg: #eee;
+    --blue-bg : #b3e0ff;
+    --border:.1rem solid var(--black);
+    --box-shadow: 0 .5 rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+
+}
+
+*{
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html{
+    font-size : 62.5%;
+    overflow-x: hidden;
+    background-color: #B4DFF6;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+}
+
+section{
+    padding: 5rem 10%;
+}
+
+.btn{
+    display: inline;
+    background: var(--white);
+    margin: 2rem;
+    margin-top: 1rem;
+    color: var(--black);
+    font-size: 1.7rem;
+    padding :1rem 3rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: var(--primary-color);
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: var(--box--shadow);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover{
+    color: var(--secondary-color);
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+}
+
+.Login {
+    background-color: white ;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    margin: auto;
+    margin-top: 130px;
+    transition: transform 0.2s;
+    width: 500px;
+    text-align: center;
+}
+
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+    font-weight: bold;
+}
+
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #1996D9 ;
+    width: 100%;
+    font-size: 16px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
