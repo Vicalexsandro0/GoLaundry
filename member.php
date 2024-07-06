@@ -55,7 +55,7 @@
             </div>
             <div class="inputBox">
                 <span>no. hp :</span>
-                <input type="tel" name="no_hp" placeholder="isi no.hpmu" required>
+                <input type="number" name="no_hp" placeholder="isi no.hpmu" required>
                 <div class="error-message"></div>
             </div>
             <div class="inputBox">

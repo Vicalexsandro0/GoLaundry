@@ -52,7 +52,6 @@ function validateForm() {
                 }
             }
         } else if (input.name === 'nik') {
-            // Specific validation for NIK
             if (input.value.length !== 16) {
                 isValid = false;
                 errorMessage.textContent = "NIK harus tepat 16 digit.";
