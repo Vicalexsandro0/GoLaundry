@@ -167,6 +167,11 @@ section{
     color: var(--light-bg);
 }
 
+.error-message {
+            color: red;
+            font-size: 0.9em;
+}
+
 .footer{
     background-color: var(--primary-color);
 }
