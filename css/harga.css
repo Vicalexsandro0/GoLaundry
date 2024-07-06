@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-:root {
-    --primary-color: #1996D9;
-    --secondary-color: #FDE400;
-    --black: #222;
-    --white: #fff;
-    --light-black: #333;
-    --light-blue: #B4DFF6;
+:root{
+    --primary-color : #1996D9;
+    --secondary-color : #FDE400;
+    --black : #222;
+    --white : #fff;
+    --grey : #555;
+    --light-white: #ddd;
+    --light-black : #333;
+    --light-blue : #B4DFF6;
     --dark-bg: rgba(0,0,0,.7);
     --light-bg: #eee;
-    --blue-bg: #b3e0ff;
+    --blue-bg : #b3e0ff;
     --border:.1rem solid var(--black);
-    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --box-shadow: 0 .5 rem 1rem rgba(0,0,0,.1);
     --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+
 }
 
 * {

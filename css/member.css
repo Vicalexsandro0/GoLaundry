@@ -7,6 +7,8 @@
     --secondary-color : #FDE400;
     --black : #222;
     --white : #fff;
+    --grey : #555;
+    --light-white: #ddd;
     --light-black : #333;
     --light-blue : #B4DFF6;
     --dark-bg: rgba(0,0,0,.7);
@@ -45,6 +47,12 @@ html::-webkit-scrollbar-track{
 
 html::-webkit-scrollbar-thumb{
     background-color: var(--primary-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .btn{
@@ -169,6 +177,11 @@ section{
     color: var(--light-bg);
 }
 
+.error-message {
+            color: red;
+            font-size: 0.9em;
+}
+
 .footer{
     background-color: var(--primary-color);
 }
@@ -280,6 +293,7 @@ section{
     }
     
 }
+<<<<<<< HEAD
 
 // Awal Lonceng Notifikasi
 .header .navbar a{
@@ -337,3 +351,5 @@ section{
     cursor: pointer;
 }
 // Akhir Lonceng Notifikasi
+=======
+>>>>>>> 2c1ee0fbbda832f324a3048038992f1b4fbdfdde

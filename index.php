@@ -160,13 +160,15 @@
     </div>
 
     
-        <section class="warning">
-            <h3>PERINGATAN !!!</h3>
-            <p>Sebelum laundry diserahkan, pastikan TIDAK ADA BARANG </p>
+       <section class="warning">
+        <h3>PERINGATAN !!!</h3>
+        <div class="warning2">
+            <p>Sebelum laundry diserahkan, pastikan TIDAK ADA BARANG</p>
             <p>YANG KETINGGALAN di semua saku pakaian.</p>
             <p>KAMI TIDAK BERTANGGUNG JAWAB:</p>
             <p>Luntur - Sobek Bahan - Susut Bahan - Kerusakan Lainnya</p>
-        </section>
+        </div>
+    </section>
     
 
 
