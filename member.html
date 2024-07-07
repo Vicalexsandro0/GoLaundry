@@ -1,3 +1,6 @@
+<?php
+date_default_timezone_set("Asia/Bangkok");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,48 +49,57 @@
     <section class="member">
 
         <h1 class="heading-title">Formulir Join Member Go Laundry</h1>
-        <form action="form_member.php" method="post" class="member-form">
-            <div class="flex">
-                <div class="inputBox">
-                    <span>nama depan:</span>
-                    <input type="text" placeholder="isi nama depanmu">
-                </div>
-                <div class="inputBox">
-                    <span>nama belakang:</span>
-                    <input type="text" placeholder="isi nama belakangmu">
-                </div>
-                <div class="inputBox">
-                    <span>NIK :</span>
-                    <input type="text" placeholder="isi NIKmu">
-                </div>
-                <div class="inputBox">
-                    <span>no. hp :</span>
-                    <input type="email" placeholder="isi no.hpmu">
-                </div>
-                <div class="inputBox">
-                    <span>alamat :</span>
-                    <input type="email" placeholder="isi alamatmu">
-                </div>
-                <div class="inputBox">
-                    <span>email :</span>
-                    <input type="number" placeholder="email">
-                </div>
-                <div class="inputBox">
-                    <span>password :</span>
-                    <input type="text" placeholder="password">
-                </div>
-                <div class="inputBox">
-                    <span>confirm password :</span>
-                    <input type="text" placeholder="confirm password">
-                </div>
-                <div class="inputBox">
-                    <span>upload KTP :</span>
-                    <input type="file" placeholder="">
-                </div>
+        <form action="mysqlmember.php" method="post" class="member-form">
+        <div class="flex">
+            <div class="inputBox">
+                <span>nama depan:</span>
+                <input type="text" name="nama_depan" placeholder="isi nama depanmu" required>
+                <div class="error-message"></div>
             </div>
+            <div class="inputBox">
+                <span>nama belakang:</span>
+                <input type="text" name="nama_belakang" placeholder="isi nama belakangmu" required>
+                <div class="error-message"></div>
+            </div>
+            <div class="inputBox">
+                <span>NIK :</span>
+                <input type="number" id="nik" name="nik" placeholder="isi NIKmu" required>
+                <div id="nik-error" class="error-message"></div>
+            </div>
+            <div class="inputBox">
+                <span>no. hp :</span>
+                <input type="number" name="no_hp" placeholder="isi no.hpmu" required>
+                <div class="error-message"></div>
+            </div>
+            <div class="inputBox">
+                <span>alamat :</span>
+                <input type="text" name="alamat" placeholder="isi alamatmu" required>
+                <div class="error-message"></div>
+            </div>
+            <div class="inputBox">
+                <span>email :</span>
+                <input type="email" name="email" placeholder="email" required>
+                <div class="error-message"></div>
+            </div>
+            <div class="inputBox">
+                <span>password :</span>
+                <input type="password" name="password" placeholder="password" required>
+                <div class="error-message"></div>
+            </div>
+            <div class="inputBox">
+                <span>confirm password :</span>
+                <input type="password" name="confirm_password" placeholder="confirm password" required>
+                <div class="error-message"></div>
+            </div>
+            <div class="inputBox">
+                <span>upload KTP :</span>
+                <input type="file" name="ktp" required>
+                <div class="error-message"></div>
+            </div>
+        </div>
 
-            <input type="submit" value="Kirim" class="btn" name="Kirim">
-        </form>
+        <input type="submit" value="Kirim" class="btn" name="submit">
+    </form>
     </section>
     <section class="footer">
         <div class="box-container">

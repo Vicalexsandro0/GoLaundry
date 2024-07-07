@@ -1,3 +1,6 @@
+<?php
+date_default_timezone_set("Asia/Bangkok");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +49,7 @@
     <section class="member">
 
         <h1 class="heading-title">Formulir Join Member Go Laundry</h1>
-        <form action="form_member.php" method="post" class="member-form">
+        <form action="mysqlmember.php" method="post" class="member-form">
         <div class="flex">
             <div class="inputBox">
                 <span>nama depan:</span>
