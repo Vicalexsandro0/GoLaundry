@@ -26,7 +26,6 @@ date_default_timezone_set("Asia/Bangkok");
         <a href="contact.php">kontak</a>
         <a href="member.php">member</a>
         <a href="about.php">tentang kami</a>
-// Awal Lonceng Notifikasi
         <a class='fas fa-bell' style='font-size:24px'Notification Icon id="notif-icon">
         </a>
         <a class="promo-dropdown" id="promo-dropdown">
@@ -34,8 +33,6 @@ date_default_timezone_set("Asia/Bangkok");
             <h2>Promo Spesial!</h2>
             <p>Dapatkan diskon hingga 50% untuk pelanggan member baru   </p>
         </a>
-        <script src="script.js"></script> 
-// Akhir Lonceng Notifikasi
     </nav>
 
     <div id="menu-btn" class="fas fa-bars"></div>

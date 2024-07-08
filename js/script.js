@@ -27,7 +27,6 @@ var swiper = new Swiper(".home-slider",{
         prevEl: ".swiper-button-prev"
     }
 })
-<<<<<<< HEAD
 
 // Awal Lonceng Notifikasi
 
@@ -51,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 // Akhir Lonceng Notifikasi
-=======
     
 function validateForm() {
     const form = document.querySelector('.member-form');
@@ -99,4 +97,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
->>>>>>> 2c1ee0fbbda832f324a3048038992f1b4fbdfdde

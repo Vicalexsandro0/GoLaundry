@@ -18,6 +18,13 @@
         <a href="contact.php">kontak</a>
         <a href="member.php">member</a>
         <a href="about.php">tentang kami</a>
+        <a class='fas fa-bell' style='font-size:24px'Notification Icon id="notif-icon">
+        </a>
+        <a class="promo-dropdown" id="promo-dropdown">
+            <span class="close-btn">&times;</span>
+            <h2>Promo Spesial!</h2>
+            <p>Dapatkan diskon hingga 50% untuk pelanggan member baru   </p>
+        </a>
     </nav>
 
     <div id="menu-btn" class="fas fa-bars"></div>
