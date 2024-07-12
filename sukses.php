@@ -1,18 +1,13 @@
 <?php
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      // Proses data formulir di sini, jika diperlukan
-      header("Location: success.php");
-      exit();}
 date_default_timezone_set("Asia/Bangkok");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go Laundry</title>
-    <link rel="stylesheet" href="css/member.css">
+    <link rel="stylesheet" href="css/sukses.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>

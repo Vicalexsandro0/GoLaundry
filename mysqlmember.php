@@ -46,6 +46,12 @@ if ($stmt->execute()) {
 } else {
     echo json_encode(["error" => "Error: " . $stmt->error]);
 }
+if ($stmt->execute()) {
+    header("Location: sukses.php");
+    exit();
+} else {
+    echo json_encode(["error" => "Error: " . $stmt->error]);
+}
 
 $stmt->close();
 $conn->close();
