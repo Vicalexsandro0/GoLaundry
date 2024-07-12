@@ -41,7 +41,7 @@ $stmt = $conn->prepare($query);
 $stmt->bind_param("sssssss", $nama_depan, $nama_belakang, $nik, $no_hp, $alamat, $email, $ktp);
 
 if ($stmt->execute()) {
-    header("Location:index.php");
+    header("Location:sukses.php");
     echo '<script>alert("Registrasi Berhasil!")</script>';
 } else {
     echo json_encode(["error" => "Error: " . $stmt->error]);

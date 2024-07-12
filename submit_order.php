@@ -29,7 +29,7 @@ $sql_insert = "INSERT INTO orders (member_id, first_name, last_name, phone_numbe
                VALUES ('$member_number', '$first_name', '$last_name', '$phone_number', '$address', '$category', '$item', '$quantity', '$total_payment')";
 
 if ($conn->query($sql_insert) === TRUE) {
-    header("Location:index.php");
+    header("Location:sukses_pesan.php");
 } else {
     echo "Error: " . $sql_insert . "<br>" . $conn->error;
 }

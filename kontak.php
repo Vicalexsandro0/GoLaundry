@@ -27,7 +27,7 @@ date_default_timezone_set("Asia/Bangkok");
         <a href="index.php">beranda</a>
         <a href="contact.php">kontak</a>
         <a href="member.php">member</a>
-        <a href="about.php">tentang kami</a>
+        <a href="kontak.php">kontak</a>
 <!--Awal Lonceng Notifikasi -->
         <a class='fas fa-bell' style='font-size:24px'Notification Icon id="notif-icon">
         </a>
