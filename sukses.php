@@ -1,6 +1,9 @@
 <?php
+
 date_default_timezone_set("Asia/Bangkok");
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,47 +51,13 @@ date_default_timezone_set("Asia/Bangkok");
     <section class="member">
 
         <h1 class="heading-title">Formulir Join Member Go Laundry</h1>
-        <form action="mysqlmember.php" method="post" class="member-form">
-        <div class="flex">
-            <div class="inputBox">
-                <span>nama depan:</span>
-                <input type="text" name="nama_depan" placeholder="isi nama depanmu" required>
-                <div class="error-message"></div>
-            </div>
-            <div class="inputBox">
-                <span>nama belakang:</span>
-                <input type="text" name="nama_belakang" placeholder="isi nama belakangmu" required>
-                <div class="error-message"></div>
-            </div>
-            <div class="inputBox">
-                <span>NIK :</span>
-                <input type="tel" id="nik" name="nik" placeholder="isi NIKmu" pattern="[0-9]{16}" required>
-                <div id="nik-error" class="error-message"></div>
-            </div>
-            <div class="inputBox">
-                <span>no. hp :</span>
-                <input type="tel" name="no_hp" id="phone" placeholder="isi no.hpmu" pattern="[0-9]{12}" required>
-                <div class="error-message"></div>
-            </div>
-            <div class="inputBox">
-                <span>alamat :</span>
-                <input type="text" name="alamat" placeholder="isi alamatmu" required>
-                <div class="error-message"></div>
-            </div>
-            <div class="inputBox">
-                <span>email :</span>
-                <input type="email" name="email" placeholder="email" required>
-                <div class="error-message"></div>
-            </div>
-            <div class="inputBox">
-                <span>upload KTP :</span>
-                <input type="file" name="ktp" required>
-                <div class="error-message"></div>
-            </div>
-        </div>
 
-        <input type="submit" value="Kirim" class="btn" name="submit">
-    </form>
+        <div class="message-box">
+        <h1>Pengisian Formulir Pendaftaran Member telah selesai, Silakan menunggu 1x24 jam untuk konfirmasi lebih lanjut</h1>
+        <button class="kembali" onclick="window.location.href='member.php'"> Kembali </button>
+    </div>
+
+
     </section>
     <section class="footer">
         <div class="box-container">
