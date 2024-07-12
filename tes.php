@@ -1,13 +1,15 @@
+<?php
+date_default_timezone_set("Asia/Bangkok");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go Laundry</title>
-    <link rel="stylesheet" href="css/satuan.css">
+    <link rel="stylesheet" href="css/member.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <style>
     body {
@@ -34,58 +36,70 @@
         </a>
     </nav>
 
+
     <div id="menu-btn" class="fas fa-bars"></div>
 
     </section>
 
-    <form id="orderForm" method="post" action="submit_order.php">
-    <div class="container">
-    
-    <section class="customer-data">
-        <h1>Order Form</h1>
-        <form id="orderForm">
-        <label>nomor member:</label>
-        <input type="text" id="member_number" name="member_number">
-        <button type="button" onclick="GetDetail()">Check Member</button> <br><br>
-
-        <label>nama depan:</label>
-        <input type="text" name="first_name" id="first_name" required><br><br>
-
-        <label>Nama belakang:</label>
-        <input type="text" id="last_name" name="last_name"><br><br>
-
-        <label>Nomor Handphone:</label>
-        <input type="text" id="phone_number" name="phone_number" required><br><br>
-
-        <label for="address">Alamat:</label>
-        <textarea id="address" name="address" rows="4"></textarea><br><br>
-    </section>
-
-    <section class="order-section">
-    <div id="orderForms">
-        <div class="order-form">
-            <label for="category">kategori:</label>
-            <select class="category" name="category">
-                    <?php include("get_categorykiloan.php"); ?>
-                </select><br>
-                <label for="item"></label>
-                <select class="item" name="item">
-                <?php include("get_itemkiloan.php");?>
-                </select><br>
-
-            <label for="quantity">kuantitas:</label>
-            <input type="number" class="quantity" name="quantity" min="1" value="1"><br><br>
-            <input type="hidden" id="total_payment" name="total_payment">
-
-    <button type="submit" id="submitOrder">Order</button>
-        </div>
+    <div class="heading" style="background:url(assets/foto/Header\ Page\ Member.png) no-repeat">
+        <h1>Dapatkan Promo Menarik Menggunakan Member Card</h1>
     </div>
     
-    
- </section>
- </div>
- </form>
+    <section class="member">
 
+        <h1 class="heading-title">Formulir Join Member Go Laundry</h1>
+        <form action="tes2.php" method="post" class="member-form">
+        <div class="flex">
+        <div class="inputBox">
+                <label>nomor member:</label>
+        <input type="text" id="member_number" name="member_number">
+        <button type="button" onclick="GetDetail()">Check Member</button> <br><br>
+            <div class="inputBox">
+                <span>nama depan:</span>
+                <input type="text" name="nama_depan" placeholder="isi nama depanmu" required>
+                <div class="error-message"></div>
+            </div>
+            <div class="inputBox">
+                <span>nama belakang:</span>
+                <input type="text" name="nama_belakang" placeholder="isi nama belakangmu" required>
+                <div class="error-message"></div>
+            </div>
+            
+            </div>
+            <div class="inputBox">
+                <span>no. hp :</span>
+                <input type="tel" name="no_hp" id="phone" placeholder="isi no.hpmu" pattern="[0-9]{12}" required>
+                <div class="error-message"></div>
+            </div>
+            <div class="inputBox">
+                <span>alamat :</span>
+                <input type="text" name="alamat" placeholder="isi alamatmu" required>
+                <div class="error-message"></div>
+            </div>
+            <div class="inputBox">
+                <span>category:</span>
+            <select class="category" name="category">
+                    <?php include("get_category.php"); ?>
+                </select><br>
+                <select name="" id=""></select>
+                <div class="error-message"></div>
+            </div>
+                <label for="item"></label>
+                <select class="item" name="item">
+                <?php include("get_item.php");?>
+                </select><br>
+            
+            <div class="inputBox">
+                <label for="quantity">kuantitas:</label>
+            <input type="number" class="quantity" name="quantity" min="1" value="1"><br><br>
+                
+                <div class="error-message"></div>
+            </div>
+        </div>
+
+        <input type="submit" value="Kirim" class="btn" name="submit">
+    </form>
+    </section>
     <section class="footer">
         <div class="box-container">
             <div class="box">
@@ -107,13 +121,9 @@
         <div class="copyright">
             <span>copyright &copy; Go Laundry</span>
         </div>
-    </section>  
-
+    </section>    
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script src="js/satuan.js"></script>
-<script src= "https://code.jquery.com/jquery-3.2.1.min.js"></script> 
-<script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script> 
-
+<script src="js/tes.js"></script>
 
 </body>
 </html>

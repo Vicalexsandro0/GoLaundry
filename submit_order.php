@@ -1,55 +1,38 @@
 <?php
-
-include 'config.php'; // Include database connection
+include 'config.php';
 $conn = getConnection();
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $memberNumber = $_POST['member_number'];
-  $firstName = $_POST['first_name'];
-  $lastName = $_POST['last_name'];
-  $phoneNumber = $_POST['phone_number'];
-  $address = $_POST['address'];
+// Retrieve form data
+$first_name = $_POST['first_name'];
+$last_name = $_POST['last_name'];
+$phone_number = $_POST['phone_number'];
+$address = $_POST['address'];
+$category = $_POST['category'];
+$item = $_POST['item'];
+$quantity = $_POST['quantity'];
 
-  // Extract order details from POST data (loop through if multiple items)
-  $orderDetails = [];
-  foreach ($_POST as $key => $value) {
-    if (strpos($key, 'category_') === 0) {
-      $categoryId = substr($key, strlen('category_'));
-      $orderDetails[] = [
-        'category_id' => $categoryId,
-        'item' => $_POST['item_' . $categoryId],
-        'quantity' => $_POST['quantity_' . $categoryId],
-      ];
-    }
-  }
+$member_number = isset($_POST['member_number']) ? $_POST['member_number'] : null;
 
-  $totalPrice = 0; // Accumulate total price
+// Calculate total_payment based on price (fetch from satuan table)
+$sql_price = "SELECT price FROM satuan WHERE category='$category' AND item='$item'";
+$result_price = $conn->query($sql_price);
+if ($result_price->num_rows > 0) {
+    $row_price = $result_price->fetch_assoc();
+    $price = $row_price['price'];
+    $total_payment = $quantity * $price;
+} else {
+    $total_payment = 0; // Handle error case
+}
 
-  // Prepare and execute insert query for order
-  $stmt = $conn->prepare("INSERT INTO orders (member_number, first_name, last_name, phone_number, address) VALUES (?, ?, ?, ?, ?)");
-  $stmt->bind_param("sssss", $memberNumber, $firstName, $lastName, $phoneNumber, $address);
-  $stmt->execute();
-  $orderId = $conn->insert_id;
+// Insert into orders table
+$sql_insert = "INSERT INTO orders (member_id, first_name, last_name, phone_number, address, category, item, quantity, total_payment)
+               VALUES ('$member_number', '$first_name', '$last_name', '$phone_number', '$address', '$category', '$item', '$quantity', '$total_payment')";
 
-  // Loop through order details and insert them with price calculations
-  foreach ($orderDetails as $detail) {
-    $categoryId = $detail['category_id'];
-    $item = $detail['item'];
-    $quantity = $detail['quantity'];
+if ($conn->query($sql_insert) === TRUE) {
+    header("Location:index.php");
+} else {
+    echo "Error: " . $sql_insert . "<br>" . $conn->error;
+}
 
-    // Fetch price from database
+$conn->close();
 
-    function getPrice($category, $item) {
-      global $conn; // Access global database connection
-    
-      $stmt = $conn->prepare("SELECT price FROM satuan WHERE category = ? AND item = ?");
-      $stmt->bind_param("ss", $category, $item);
-      $stmt->execute();
-      $stmt->bind_result($price);
-      $stmt->fetch();
-      $stmt->close();
-    
-      return $price;
-    }
-  }
-}  

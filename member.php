@@ -1,11 +1,6 @@
 <?php
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      // Proses data formulir di sini, jika diperlukan
-      header("Location: success.php");
-      exit();}
 date_default_timezone_set("Asia/Bangkok");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -293,3 +293,73 @@ section{
     font-size: 2rem;
     color: var(--white);
 }
+
+
+@media (max-width:1200px){
+
+    section{
+        padding: 3rem 5%;
+    }
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    section{
+        padding: 3rem 2 rem;
+    }
+
+    .home .swiper-slide .content h3{
+        font-size: 10vh;
+    }
+}
+
+@media (max-width:768px){
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        border-top: var(--border);
+        padding: 2rem;
+        transition: .2s;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+        text-align: center;
+    }
+    .operational-hours .box-container div span{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .head-title{
+        font-size: 3.5rem;
+    }
+    
+}

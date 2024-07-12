@@ -51,8 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 // Akhir Lonceng Notifikasi
-<<<<<<< HEAD
-=======
 
 
 
@@ -95,4 +93,3 @@ orderForm.addEventListener('submit', (e) => {
     })
     .catch(error => console.error('Error:', error));
 });
->>>>>>> 4acf974418e0208a7cf33f9ed12ef03ff51677d4

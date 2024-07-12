@@ -53,6 +53,45 @@ document.addEventListener('DOMContentLoaded', function() {
 // Akhir Lonceng Notifikasi
 
 
+// Member
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.member-form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        if (!validateForm()) {
+            return; 
+        }
+        const formData = new URLSearchParams(new FormData(form));
+
+        // Send form data to server using fetch API
+        fetch('php/tes2.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                alert("Member berhasil dibuat!");
+                form.reset(); 
+            } else if (data.error) {
+                if (data.error.includes("NIK")) {
+                    alert("NIK sudah dipakai");
+                } else if (data.error.includes("Email")) {
+                    alert("Email sudah dipakai");
+                } else {
+                    alert(data.error); // Show any other error messages
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Terjadi kesalahan saat memproses permintaan.');
+        });
+    });
+});
+
+
 
 
 
@@ -244,22 +283,4 @@ $(document).ready(function(){
       });
     });
   });
-
-
-
-// total
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

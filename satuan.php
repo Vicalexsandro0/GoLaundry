@@ -38,8 +38,9 @@
 
     </section>
 
-
+    <form id="orderForm" method="post" action="submit_order.php">
     <div class="container">
+    
     <section class="customer-data">
         <h1>Order Form</h1>
         <form id="orderForm">
@@ -60,7 +61,6 @@
         <textarea id="address" name="address" rows="4"></textarea><br><br>
     </section>
 
-
     <section class="order-section">
     <div id="orderForms">
         <div class="order-form">
@@ -75,14 +75,16 @@
 
             <label for="quantity">kuantitas:</label>
             <input type="number" class="quantity" name="quantity" min="1" value="1"><br><br>
+            <input type="hidden" id="total_payment" name="total_payment">
+
+    <button type="submit" id="submitOrder">Order</button>
         </div>
     </div>
-    <button type="button" id="addItem">tambah barang</button><br><br>
-    <button type="submit" id="submitOrder">order</button>
-
-    <div id="orderItems" class="order-items"></div>
-</section>
+    
+    
+ </section>
  </div>
+ </form>
 
     <section class="footer">
         <div class="box-container">

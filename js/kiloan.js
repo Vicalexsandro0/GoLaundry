@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fetch items function
     function fetchItems(category, itemSelect) {
-        fetch('get_item.php?category=' + encodeURIComponent(category))
+        fetch('get_itemkiloan.php?category=' + encodeURIComponent(category))
             .then(response => response.text())
             .then(data => {
                 itemSelect.innerHTML = data; // Update the "Item" dropdown content
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Memasukkan kategori barang satuan
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('fetch_satuan.php')
+    fetch('fetch_kiloan.php')
         .then(response => response.json())
         .then(itemsData => {
             console.log('Fetched items:', itemsData); // Log fetched data
@@ -235,7 +235,7 @@ $(document).ready(function(){
     $(".category").change(function(){
       var category = $(this).val();
       $.ajax({
-        url: "get_item.php",
+        url: "get_itemkiloan.php",
         type: "GET",
         data: {category: category},
         success: function(data){
