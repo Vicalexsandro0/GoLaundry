@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 
+
 :root{
     --primary-color : #1996D9;
     --secondary-color : #FDE400;
@@ -34,6 +35,7 @@
 html{
     font-size : 62.5%;
     overflow-x: hidden;
+    background-color: #B4DFF6;
 }
 
 html::-webkit-scrollbar{
@@ -101,52 +103,52 @@ section{
 .promo-dropdown {
     display: none;
     position: absolute;
-    top: 100px;
-    right: 70px;
-    max-width: 400px;
+    top: 10rem;
+    right: 7rem;
+    max-width: 40rem;
     width: 100%;
-    padding: 20px;
-    background-color: #ffeb3b;
-    border-radius: 10px;
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 0.8rem rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .promo-dropdown h2 {
-    margin: 0 0 10px;
-    font-size: 24px;
-    color: #1996D9;
-    text-shadow: black;
+    margin: 0 0 1rem;
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    text-shadow: var(--text-shadow);
 }
 
 .promo-dropdown p {
-    margin: 0 0 20px;
-    font-size: 18px;
-    color: black;
-    text-shadow: 9px black ;
+    margin: 0 0 2rem;
+    font-size: 1.8rem;
+    color: var(--black);
+    text-shadow: 0.9rem var(--black) ;
 
 }
 
 .promo-dropdown .promo-link {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #fbc02d;
-    color: #fff;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     font-weight: bold;
 }
 
 .promo-dropdown .promo-link:hover {
-    background-color: #f9a825;
+    background-color: var(--secondary-color);
 }
 
 .promo-dropdown .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    color: #333;
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    color: var(--light-black);
     cursor: pointer;
 }
 
@@ -157,41 +159,97 @@ section{
     display: none;
 }
 
-.services .box-container{
+.container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            width: 60%;
+            margin: 5rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.head-title{
-    margin-bottom: 3rem;
-    text-align: center;
-    color: var(--primary-color);
-    font-size: 4.5rem;
+.container h1 {
+    font-size: 3rem;
+    margin: 2rem;
 }
 
-.services .box-container .box{
-    margin: 10rem;
-    padding: 14rem;
-    text-align: center;
+.customer-data button{
+    padding: 1rem 2rem;
     background-color: var(--primary-color);
-    box-shadow: 0 0.5rem 0.5rem 0 rgba(0,0,0,0.2);
-    border-radius: 2rem;
-}
-
-.services .box-container .box:hover{
-    box-shadow: 0 1rem 1rem 0 rgba(0, 235, 235, 0.2)
-}
-
-.services .box-container .box img{
-    height: 7rem;
-}
-
-.services .box-container .box h3{
     color: var(--white);
-    font-size: 1.7rem;
-    padding-top: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
+
+.customer-data button:hover {
+    background-color: var(--secondary-color);
+}
+
+
+.customer-data,
+.order-section {
+    padding: 3rem; 
+    background-color: var(--white); 
+    border-radius: 1rem; 
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.customer-data label,
+.order-section label {
+    display: block; 
+    margin-bottom: 0.5rem; 
+    font-size: 1.7rem;
+}
+
+.customer-data input,
+.customer-data textarea{
+    width: 100%; 
+    max-width: 30rem; 
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+}
+
+.order-section select,
+.order-section input {
+    width: 100%; 
+    max-width: 20rem; 
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.order-section select {
+    max-width: 21rem; 
+}
+
+.order-section button {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.order-section button:hover {
+    background-color: var(--secondary-color);
+}
+
+
+
 
 .footer{
     background-color: var(--primary-color);
@@ -234,73 +292,4 @@ section{
     border-top: .1rem solid var(--light-bg);
     font-size: 2rem;
     color: var(--white);
-}
-
-@media (max-width:1200px){
-
-    section{
-        padding: 3rem 5%;
-    }
-}
-
-@media (max-width:991px){
-
-    html{
-        font-size: 55%;
-    }
-    section{
-        padding: 3rem 2 rem;
-    }
-
-    .home .swiper-slide .content h3{
-        font-size: 10vh;
-    }
-}
-
-@media (max-width:768px){
-    #menu-btn{
-        display: inline-block;
-        transition: .2s linear;
-    }
-
-    #menu-btn.fa-times{
-        transform: rotate(180deg);
-    }
-
-    .header .navbar{
-        position: absolute;
-        top: 99%;
-        left: 0;
-        right: 0;
-        background-color: var(--primary-color);
-        border-top: var(--border);
-        padding: 2rem;
-        transition: .2s;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-
-    .header .navbar.active{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-
-    .header .navbar a{
-        display: block;
-        margin: 2rem;
-        text-align: center;
-    }
-    .operational-hours .box-container div span{
-        font-size: 1rem;
-    }
-}
-
-@media (max-width:450px){
-
-    html{
-        font-size: 50%;
-    }
-
-    .head-title{
-        font-size: 3.5rem;
-    }
-    
 }

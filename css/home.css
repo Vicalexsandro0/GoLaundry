@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 
-
 :root{
     --primary-color : #1996D9;
     --secondary-color : #FDE400;
@@ -261,7 +260,6 @@ section{
     padding: 3rem 2rem;
     text-align: center;
     background-color: var(--primary-color);
-    cursor: pointer;
 }
 
 .services .box-container .box img{
@@ -274,6 +272,15 @@ section{
     padding-top: 1rem;
 }
 
+.services a{
+    color: var(--white);
+    background-color: var(--light-blue);
+    text-align: center;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .operational-hours {
     background-color: #b3e5fc;

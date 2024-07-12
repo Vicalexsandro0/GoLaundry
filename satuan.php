@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go Laundry</title>
-    <link rel="stylesheet" href="css/pemesanan.css">
+    <link rel="stylesheet" href="css/satuan.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <style>
     body {
@@ -37,20 +38,52 @@
 
     </section>
 
-    <section class="services">
-        <h1 class="head-title">Pemesanan</h1>
 
-        <div class="box-container">
-            <a href="satuan.php" class="box">
-                <img src="assets/icon/Baju.png" alt="">
-                <h3>laundry satuan</h3>
-            </a>
-            <a href="kiloan.php" class="box">
-                <img src="assets/icon/Timbangan.png" alt="">
-                <h3>laundry kiloan</h3>
-            </a>
+    <div class="container">
+    <section class="customer-data">
+        <h1>Order Form</h1>
+        <form id="orderForm">
+        <label>nomor member:</label>
+        <input type="text" id="member_number" name="member_number">
+        <button type="button" onclick="GetDetail()">Check Member</button> <br><br>
+
+        <label>nama depan:</label>
+        <input type="text" name="first_name" id="first_name" required><br><br>
+
+        <label>Nama belakang:</label>
+        <input type="text" id="last_name" name="last_name"><br><br>
+
+        <label>Nomor Handphone:</label>
+        <input type="text" id="phone_number" name="phone_number" required><br><br>
+
+        <label for="address">Alamat:</label>
+        <textarea id="address" name="address" rows="4"></textarea><br><br>
     </section>
-    
+
+
+    <section class="order-section">
+    <div id="orderForms">
+        <div class="order-form">
+            <label for="category">kategori:</label>
+            <select class="category" name="category">
+                    <?php include("get_category.php"); ?>
+                </select><br>
+                <label for="item"></label>
+                <select class="item" name="item">
+                <?php include("get_item.php");?>
+                </select><br>
+
+            <label for="quantity">kuantitas:</label>
+            <input type="number" class="quantity" name="quantity" min="1" value="1"><br><br>
+        </div>
+    </div>
+    <button type="button" id="addItem">tambah barang</button><br><br>
+    <button type="submit" id="submitOrder">order</button>
+
+    <div id="orderItems" class="order-items"></div>
+</section>
+ </div>
+
     <section class="footer">
         <div class="box-container">
             <div class="box">
@@ -72,9 +105,13 @@
         <div class="copyright">
             <span>copyright &copy; Go Laundry</span>
         </div>
-    </section>    
+    </section>  
+
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script src="js/script.js"></script>
+<script src="js/satuan.js"></script>
+<script src= "https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+<script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script> 
+
 
 </body>
 </html>

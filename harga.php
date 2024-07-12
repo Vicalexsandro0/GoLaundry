@@ -14,27 +14,28 @@
 }
 </style>
 <body>
-        <section class="header">
-    
-        <a href="index.php" class = "logo"><img src="assets/Group 2.png" alt="GoLaundry"></a>
-    
-        <nav class="navbar">
+    <section class="header">
+
+    <a href="index.php" class = "logo"><img src="assets/Group 2.png" alt="GoLaundry"></a>
+
+    <nav class="navbar">
         <a href="index.php">beranda</a>
-        <a href="contact.php">kontak</a>
+        <a href="harga.php">harga</a>
+        <a href="pemesanan.php">pemesanan</a>
         <a href="member.php">member</a>
         <a href="about.php">tentang kami</a>
-        <a class='fas fa-bell' style='font-size:24px'Notification Icon id="notif-icon">
+        <a class='fas fa-bell'Notification Icon id="notif-icon">
         </a>
         <a class="promo-dropdown" id="promo-dropdown">
             <span class="close-btn">&times;</span>
             <h2>Promo Spesial!</h2>
             <p>Dapatkan diskon hingga 50% untuk pelanggan member baru   </p>
         </a>
-       </nav>
-    
-        <div id="menu-btn" class="fas fa-bars"></div>
-    
-        </section>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    </section>
     
         <section class="price">
             <div class="box-container">

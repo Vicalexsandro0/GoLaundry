@@ -1,3 +1,4 @@
+//Header
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector ('.header .navbar');
 
@@ -50,50 +51,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 // Akhir Lonceng Notifikasi
-    
-function validateForm() {
-    const form = document.querySelector('.member-form');
-    let isValid = true;
 
-    form.querySelectorAll('input[required]').forEach(input => {
-        const errorMessage = input.nextElementSibling;
 
-        if (!input.validity.valid) {
-            isValid = false;
-            if (input.validity.valueMissing) {
-                errorMessage.textContent = `${input.previousElementSibling.textContent} harus diisi.`;
-            } else if (input.type === 'number' && input.validity.patternMismatch) {
-                errorMessage.textContent = `${input.previousElementSibling.textContent} harus berupa angka.`;
-            } else if (input.type === 'email' && input.validity.typeMismatch) {
-                errorMessage.textContent = `${input.previousElementSibling.textContent} harus berupa email yang valid.`;
-            } else if (input.type === 'password' && input.name === 'confirm_password') {
-                const passwordInput = form.querySelector('input[name="password"]');
-                if (input.value !== passwordInput.value) {
-                    errorMessage.textContent = `Password tidak cocok.`;
-                } else {
-                    errorMessage.textContent = '';
-                }
-            }
-        } else if (input.name === 'nik') {
-            if (input.value.length !== 16) {
-                isValid = false;
-                errorMessage.textContent = "NIK harus tepat 16 digit.";
-            } else {
-                errorMessage.textContent = "";
-            }
-        } else {
-            errorMessage.textContent = '';
-        }
+
+// Pemesanan
+
+
+// total
+function updateTotal() {
+    const orderItems = document.querySelectorAll('.order-item');
+    let total = 0;
+    orderItems.forEach(item => {
+        
+        const itemName = item.textContent.split(' ')[0];
+        const itemPrice = parseFloat(item.textContent.split('Rp ')[1]);
+        const quantity = parseInt(item.textContent.split('x')[1]);
+        total += itemPrice * quantity;
     });
-
-    return isValid;
+    totalPaymentSpan.textContent = `Rp ${total}`;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.member-form');
-    form.addEventListener('submit', function(event) {
-        if (!validateForm()) {
-            event.preventDefault(); // Prevent form submission if validation fails
-        }
-    });
+
+orderForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    
+    const formData = new FormData(orderForm);
+    formData.append('totalPayment', totalPaymentSpan.textContent.replace('Rp ', ''));
+
+    fetch('save_order.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        
+        orderForm.reset();
+        orderItemsContainer.innerHTML = '';
+        totalPaymentSpan.textContent = 'Rp 0';
+    })
+    .catch(error => console.error('Error:', error));
 });
