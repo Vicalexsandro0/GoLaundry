@@ -23,20 +23,19 @@ date_default_timezone_set("Asia/Bangkok");
 
     <nav class="navbar">
         <a href="index.php">beranda</a>
-        <a href="contact.php">kontak</a>
+        <a href="harga.php">harga</a>
+        <a href="pemesanan.php">pemesanan</a>
         <a href="member.php">member</a>
         <a href="about.php">tentang kami</a>
-// Awal Lonceng Notifikasi
-        <a class='fas fa-bell' style='font-size:24px'Notification Icon id="notif-icon">
+        <a class='fas fa-bell'Notification Icon id="notif-icon">
         </a>
         <a class="promo-dropdown" id="promo-dropdown">
             <span class="close-btn">&times;</span>
             <h2>Promo Spesial!</h2>
             <p>Dapatkan diskon hingga 50% untuk pelanggan member baru   </p>
         </a>
-        <script src="script.js"></script> 
-// Akhir Lonceng Notifikasi
     </nav>
+
 
     <div id="menu-btn" class="fas fa-bars"></div>
 
@@ -63,12 +62,12 @@ date_default_timezone_set("Asia/Bangkok");
             </div>
             <div class="inputBox">
                 <span>NIK :</span>
-                <input type="number" id="nik" name="nik" placeholder="isi NIKmu" required>
+                <input type="tel" id="nik" name="nik" placeholder="isi NIKmu" pattern="[0-9]{16}" required>
                 <div id="nik-error" class="error-message"></div>
             </div>
             <div class="inputBox">
                 <span>no. hp :</span>
-                <input type="number" name="no_hp" placeholder="isi no.hpmu" required>
+                <input type="tel" name="no_hp" id="phone" placeholder="isi no.hpmu" pattern="[0-9]{12}" required>
                 <div class="error-message"></div>
             </div>
             <div class="inputBox">
@@ -79,16 +78,6 @@ date_default_timezone_set("Asia/Bangkok");
             <div class="inputBox">
                 <span>email :</span>
                 <input type="email" name="email" placeholder="email" required>
-                <div class="error-message"></div>
-            </div>
-            <div class="inputBox">
-                <span>password :</span>
-                <input type="password" name="password" placeholder="password" required>
-                <div class="error-message"></div>
-            </div>
-            <div class="inputBox">
-                <span>confirm password :</span>
-                <input type="password" name="confirm_password" placeholder="confirm password" required>
                 <div class="error-message"></div>
             </div>
             <div class="inputBox">
@@ -124,7 +113,7 @@ date_default_timezone_set("Asia/Bangkok");
         </div>
     </section>    
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script src="js/script.js"></script>
+<script src="js/member.js"></script>
 
 </body>
 </html>

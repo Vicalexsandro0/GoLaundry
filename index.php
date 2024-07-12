@@ -15,9 +15,17 @@
 
     <nav class="navbar">
         <a href="index.php">beranda</a>
-        <a href="contact.php">kontak</a>
+        <a href="harga.php">harga</a>
+        <a href="pemesanan.php">pemesanan</a>
         <a href="member.php">member</a>
         <a href="about.php">tentang kami</a>
+        <a class='fas fa-bell'Notification Icon id="notif-icon">
+        </a>
+        <a class="promo-dropdown" id="promo-dropdown">
+            <span class="close-btn">&times;</span>
+            <h2>Promo Spesial!</h2>
+            <p>Dapatkan diskon hingga 50% untuk pelanggan member baru   </p>
+        </a>
     </nav>
 
     <div id="menu-btn" class="fas fa-bars"></div>
@@ -34,7 +42,7 @@
                     <div class="content">
                         <span>F A S T & C L E A N</span>
                         <h3>Go Laundry</h3>
-                        <a href="harga.php" class="btn">pick up</a>
+                        <a href="pemesanan.php" class="btn">pick up</a>
                         <a href="harga.php" class="btn">cek harga</a>
                     </div>
                 </div>
@@ -97,12 +105,12 @@
                 <h3>cuci karpet</h3>
             </div>
 
-
             <div class="box">
                 <img src="assets/icon/Sepatu.png" alt="">
                 <h3>cuci sepatu</h3>
             </div>
         </div>
+        <a href="Pemesanan.php" class="btn">Selengkapnya</a>
     </section>
 
     <section class="operational-hours">
@@ -177,7 +185,8 @@
             <div class="box">
                 <h3>menu</h3>
                 <a href="index.php"><i class="fas fa-angle-right"></i>beranda</a>
-                <a href="contact.php"><i class="fas fa-angle-right"></i>kontak</a>
+                <a href="harga.php"><i class="fas fa-angle-right"></i>harga</a>
+                <a href="pemesanan.php"><i class="fas fa-angle-right"></i>pemesanan</a>
                 <a href="member.php"><i class="fas fa-angle-right"></i>member</a>
                 <a href="about.php"><i class="fas fa-angle-right"></i>tentang kami</a>
             </div>

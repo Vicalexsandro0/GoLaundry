@@ -1,3 +1,4 @@
+//Header
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector ('.header .navbar');
 
@@ -50,3 +51,48 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 // Akhir Lonceng Notifikasi
+<<<<<<< HEAD
+=======
+
+
+
+// Pemesanan
+
+
+// total
+function updateTotal() {
+    const orderItems = document.querySelectorAll('.order-item');
+    let total = 0;
+    orderItems.forEach(item => {
+        
+        const itemName = item.textContent.split(' ')[0];
+        const itemPrice = parseFloat(item.textContent.split('Rp ')[1]);
+        const quantity = parseInt(item.textContent.split('x')[1]);
+        total += itemPrice * quantity;
+    });
+    totalPaymentSpan.textContent = `Rp ${total}`;
+}
+
+
+orderForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    
+    const formData = new FormData(orderForm);
+    formData.append('totalPayment', totalPaymentSpan.textContent.replace('Rp ', ''));
+
+    fetch('save_order.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        
+        orderForm.reset();
+        orderItemsContainer.innerHTML = '';
+        totalPaymentSpan.textContent = 'Rp 0';
+    })
+    .catch(error => console.error('Error:', error));
+});
+>>>>>>> 4acf974418e0208a7cf33f9ed12ef03ff51677d4
