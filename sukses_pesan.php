@@ -47,9 +47,6 @@ date_default_timezone_set("Asia/Bangkok");
   
     
     <section class="member">
-
-        <h1 class="heading-title">Pemesanan</h1>
-
         <div class="message-box">
         <h1>Pemesanan Anda berhasil di proses Mohon menunggu hingga pesanan Anda selesai</h1>
         <button class="kembali" onclick="window.location.href='Pemesanan.php'"> Kembali </button>

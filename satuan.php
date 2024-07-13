@@ -24,7 +24,7 @@
         <a href="harga.php">harga</a>
         <a href="pemesanan.php">pemesanan</a>
         <a href="member.php">member</a>
-        <a href="about.php">tentang kami</a>
+        <a href="kontak.php">kontak</a>
         <a class='fas fa-bell'Notification Icon id="notif-icon">
         </a>
         <a class="promo-dropdown" id="promo-dropdown">

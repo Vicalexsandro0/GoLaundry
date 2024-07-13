@@ -90,7 +90,7 @@ section{
 .header .navbar a{
     font-size: 2rem;
     margin-left: 2rem;
-    color: var(--black);
+    color: var(--white);
     cursor: pointer;
 }
 
@@ -305,6 +305,10 @@ section{
     
 }
 
+.member{
+    margin: 15rem;
+}
+
 .member .kembali {
     cursor: pointer;
     width: 15rem;
@@ -316,7 +320,6 @@ section{
     border-radius: 10rem; 
     box-shadow: 0 0 2px black;
     color: #eee;
-    
     
 }
 .member .message-box {

@@ -92,7 +92,7 @@ section{
 .header .navbar a{
     font-size: 2rem;
     margin-left: 2rem;
-    color: var(--black);
+    color: var(--white);
     cursor: pointer;
 }
 
@@ -294,7 +294,6 @@ section{
     color: var(--white);
 }
 
-
 @media (max-width:1200px){
 
     section{
@@ -363,3 +362,4 @@ section{
     }
     
 }
+   

@@ -23,7 +23,7 @@
         <a href="harga.php">harga</a>
         <a href="pemesanan.php">pemesanan</a>
         <a href="member.php">member</a>
-        <a href="about.php">tentang kami</a>
+        <a href="kontak.php">kontak</a>
         <a class='fas fa-bell'Notification Icon id="notif-icon">
         </a>
         <a class="promo-dropdown" id="promo-dropdown">
@@ -74,14 +74,14 @@
                 <ul>
                   <p>minimal 3 kg</p>  
                   <li><span>Cuci</span><span>Rp. 1,900/Kg</span></li>
-                  <li><span>Cuci Kering</span><span>Rp. 5,000/Kg</span></li>
-                  <li><span>Cuci Komplit</span><span>Rp. 7,000/Kg</span></li>
+                  <li><span>Cuci Kering</span><span>Rp. 5,500/Kg</span></li>
+                  <li><span>Cuci Komplit</span><span>Rp. 7,500/Kg</span></li>
                   <p>express 24 jam</p>
-                  <li><span>Cuci Kering (Express 6 Jam)</span><span>Rp. 10,000/Kg</span></li>
-                  <li><span>Cuci Setrika (Express 6 Jam)</span><span>Rp. 13,000/Kg</span></li>
+                  <li><span>Cuci Kering (Express 6 Jam)</span><span>Rp. 10,500/Kg</span></li>
+                  <li><span>Cuci Setrika (Express 6 Jam)</span><span>Rp. 13,500/Kg</span></li>
                   <p>express 4 jam</p>
-                  <li><span>Cuci Kering (Express 3 Jam)</span><span>Rp. 15,000/Kg</span></li>
-                  <li><span>Cuci Setrika (Express 3 Jam)</span><span>Rp. 17,000/Kg</span></li>
+                  <li><span>Cuci Kering (Express 3 Jam)</span><span>Rp. 15,500/Kg</span></li>
+                  <li><span>Cuci Setrika (Express 3 Jam)</span><span>Rp. 17,500/Kg</span></li>
                   <li><span>Gorden</span><span>Rp. 15,000/Kg</span></li>
                 </ul>
               </div>

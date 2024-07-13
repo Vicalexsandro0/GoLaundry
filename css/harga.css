@@ -64,7 +64,6 @@ section {
     box-shadow: var(--box--shadow);
     align-items: center;
     justify-content: space-between;
-    
 }
 
 .header .logo{
@@ -75,8 +74,12 @@ section {
 .header .navbar a{
     font-size: 2rem;
     margin-left: 2rem;
-    color: var(--black);
+    color: var(--white);
     cursor: pointer;
+}
+
+.header .navbar a:hover{
+    color: var(--secondary-color);
 }
 
 .promo-dropdown {
@@ -87,7 +90,7 @@ section {
     max-width: 400px;
     width: 100%;
     padding: 20px;
-    background-color: #ffeb3b;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -96,30 +99,30 @@ section {
 .promo-dropdown h2 {
     margin: 0 0 10px;
     font-size: 24px;
-    color: #1996D9;
-    text-shadow: black;
+    color: var(--primary-color);
+    text-shadow: var(--black);
 }
 
 .promo-dropdown p {
     margin: 0 0 20px;
     font-size: 18px;
-    color: black;
-    text-shadow: 9px black ;
+    color: var(--black);
+    text-shadow: 9px var(--black) ;
 
 }
 
 .promo-dropdown .promo-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #fbc02d;
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--white);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
 }
 
 .promo-dropdown .promo-link:hover {
-    background-color: #f9a825;
+    background-color: var(--secondary-color);
 }
 
 .promo-dropdown .close-btn {
@@ -127,11 +130,8 @@ section {
     top: 10px;
     right: 10px;
     font-size: 20px;
-    color: #333;
+    color: var(--light-black);
     cursor: pointer;
-}
-.header .navbar a:hover{
-    color: var(--secondary-color);
 }
 
 #menu-btn{
@@ -140,6 +140,7 @@ section {
     color: var(--black);
     display: none;
 }
+
 
 .price {
     display: grid;
@@ -282,10 +283,6 @@ section {
 }
 
 @media (max-width:768px){
-    .price{
-        display: block;
-    }
-
     #menu-btn{
         display: inline-block;
         transition: .2s linear;

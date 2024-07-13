@@ -122,30 +122,30 @@ section{
 .promo-dropdown h2 {
     margin: 0 0 10px;
     font-size: 24px;
-    color: #1996D9;
-    text-shadow: black;
+    color: var(--primary-color);
+    text-shadow: var(--black);
 }
 
 .promo-dropdown p {
     margin: 0 0 20px;
     font-size: 18px;
-    color: black;
-    text-shadow: 9px black ;
+    color: var(--black);
+    text-shadow: 9px var(--black) ;
 
 }
 
 .promo-dropdown .promo-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #fbc02d;
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--white);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
 }
 
 .promo-dropdown .promo-link:hover {
-    background-color: #f9a825;
+    background-color: var(--secondary-color);
 }
 
 .promo-dropdown .close-btn {
@@ -153,7 +153,7 @@ section{
     top: 10px;
     right: 10px;
     font-size: 20px;
-    color: #333;
+    color: var(--light-black);
     cursor: pointer;
 }
 
@@ -344,7 +344,3 @@ section{
     }
     
 }
-
-
-
-

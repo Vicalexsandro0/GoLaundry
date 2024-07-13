@@ -25,7 +25,7 @@ if ($result_price->num_rows > 0) {
 }
 
 // Insert into orders table
-$sql_insert = "INSERT INTO orders (member_id, first_name, last_name, phone_number, address, category, item, quantity, total_payment)
+$sql_insert = "INSERT INTO orders (member_number, first_name, last_name, phone_number, address, category, item, quantity, total_payment)
                VALUES ('$member_number', '$first_name', '$last_name', '$phone_number', '$address', '$category', '$item', '$quantity', '$total_payment')";
 
 if ($conn->query($sql_insert) === TRUE) {

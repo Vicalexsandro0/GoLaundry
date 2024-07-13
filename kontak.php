@@ -25,19 +25,17 @@ date_default_timezone_set("Asia/Bangkok");
 
     <nav class="navbar">
         <a href="index.php">beranda</a>
-        <a href="contact.php">kontak</a>
+        <a href="harga.php">harga</a>
+        <a href="pemesanan.php">pemesanan</a>
         <a href="member.php">member</a>
         <a href="kontak.php">kontak</a>
-<!--Awal Lonceng Notifikasi -->
-        <a class='fas fa-bell' style='font-size:24px'Notification Icon id="notif-icon">
+        <a class='fas fa-bell'Notification Icon id="notif-icon">
         </a>
         <a class="promo-dropdown" id="promo-dropdown">
             <span class="close-btn">&times;</span>
             <h2>Promo Spesial!</h2>
             <p>Dapatkan diskon hingga 50% untuk pelanggan member baru   </p>
         </a>
-        <script src="script.js"></script> 
-<!--Akhir Lonceng Notifikasi -->
     </nav>
 
     <div id="menu-btn" class="fas fa-bars"></div>

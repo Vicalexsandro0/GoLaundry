@@ -4,19 +4,14 @@ include 'config.php';
 
 $conn = getConnection();
 
-$nama_depan = $_POST['nama_depan'];
-$nama_belakang = $_POST['nama_belakang'];
-$nik = $_POST['nik'];
-$no_hp = $_POST['no_hp'];
-$alamat = $_POST['alamat'];
-$email = $_POST['email'];
-$ktp = $_POST['ktp'];
-
-// Check if NIK is exactly 16 digits
-if (strlen($nik) !== 16) {
-    echo json_encode(["error" => "NIK harus tepat 16 digit."]);
-    exit();
-}
+// Fetch values from $_POST
+$nama_depan = isset($_POST['nama_depan']) ? $_POST['nama_depan'] : '';
+$nama_belakang = isset($_POST['nama_belakang']) ? $_POST['nama_belakang'] : '';
+$nik = isset($_POST['nik']) ? $_POST['nik'] : '';
+$no_hp = isset($_POST['no_hp']) ? $_POST['no_hp'] : '';
+$alamat = isset($_POST['alamat']) ? $_POST['alamat'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$ktp = isset($_POST['ktp']) ? $_POST['ktp'] : '';
 
 // Check if NIK already exists
 $query = "SELECT * FROM members WHERE nik = ?";
@@ -26,10 +21,8 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
-    
-    echo '<script>alert("NIK sudah digunakan")</script>';
-    $stmt->close();
-    $conn->close();
+    // If NIK already exists, redirect to success page
+    header("Location: sukses.php");
     exit();
 }
 
@@ -41,12 +34,16 @@ $stmt = $conn->prepare($query);
 $stmt->bind_param("sssssss", $nama_depan, $nama_belakang, $nik, $no_hp, $alamat, $email, $ktp);
 
 if ($stmt->execute()) {
-    header("Location:sukses.php");
-    echo '<script>alert("Registrasi Berhasil!")</script>';
+    // On successful insertion, redirect to success page
+    header("Location: sukses.php");
+    exit();
 } else {
+    // If execution fails, handle the error
+    header('Content-Type: application/json');
     echo json_encode(["error" => "Error: " . $stmt->error]);
 }
 
 $stmt->close();
 $conn->close();
 ?>
+1

@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new URLSearchParams(new FormData(form));
 
         // Send form data to server using fetch API
-        fetch('php/mysqlmember.php', {
+        fetch('mysqlmember.php', {
             method: 'POST',
             body: formData
         })
@@ -74,16 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data.message) {
                 alert("Member berhasil dibuat!");
                 form.reset(); 
-            } else if (data.error) {
-                if (data.error.includes("NIK")) {
-                    alert("NIK sudah dipakai");
-                } else if (data.error.includes("Email")) {
-                    alert("Email sudah dipakai");
                 } else {
                     alert(data.error); // Show any other error messages
                 }
-            }
-        })
+            })
         .catch(error => {
             console.error('Error:', error);
             alert('Terjadi kesalahan saat memproses permintaan.');
