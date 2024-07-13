@@ -10,7 +10,7 @@ date_default_timezone_set("Asia/Bangkok");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go Laundry</title>
-    <link rel="stylesheet" href="css/sukses.css">
+    <link rel="stylesheet" href="css/sukses_pesan.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -29,7 +29,7 @@ date_default_timezone_set("Asia/Bangkok");
         <a href="harga.php">harga</a>
         <a href="pemesanan.php">pemesanan</a>
         <a href="member.php">member</a>
-        <a href="about.php">tentang kami</a>
+        <a href="about.php">kontak</a>
         <a class='fas fa-bell'Notification Icon id="notif-icon">
         </a>
         <a class="promo-dropdown" id="promo-dropdown">
@@ -44,17 +44,12 @@ date_default_timezone_set("Asia/Bangkok");
 
     </section>
 
-    <div class="heading" style="background:url(assets/foto/Header\ Page\ Member.png) no-repeat">
-        <h1>Dapatkan Promo Menarik Menggunakan Member Card</h1>
-    </div>
     
     <section class="member">
 
-        <h1 class="heading-title">Formulir Join Member Go Laundry</h1>
-
         <div class="message-box">
         <h1>Pengisian Formulir Pendaftaran Member telah selesai, Silakan menunggu 1x24 jam untuk konfirmasi lebih lanjut</h1>
-        <button class="kembali" onclick="window.location.href='member.php'"> Kembali </button>
+        <button class="kembali" onclick="window.location.href='index.php'"> Kembali </button>
     </div>
 
 

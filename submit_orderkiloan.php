@@ -9,16 +9,16 @@ $phone_number = $_POST['phone_number'];
 $address = $_POST['address'];
 $category = $_POST['category'];
 $item = $_POST['item'];
-$quantity = $_POST['quantity'];
+$quantity = $_POST['quantity']; 
 
 $member_number = isset($_POST['member_number']) ? $_POST['member_number'] : null;
 
 // Calculate total_payment based on price (fetch from satuan table)
-$sql_price = "SELECT price FROM satuan WHERE category='$category' AND item='$item'";
+$sql_price = "SELECT price_per_kg FROM kiloan WHERE category='$category' AND item='$item'";
 $result_price = $conn->query($sql_price);
 if ($result_price->num_rows > 0) {
     $row_price = $result_price->fetch_assoc();
-    $price = $row_price['price'];
+    $price = $row_price['price_per_kg'];
     $total_payment = $quantity * $price;
 } else {
     $total_payment = 0; // Handle error case

@@ -1,5 +1,4 @@
 <?php
-
 include 'config.php';
 $conn = getConnection();
 
@@ -16,8 +15,5 @@ if (mysqli_num_rows($result) > 0) {
   echo "No categories found";
 }
 
-
-
 mysqli_close($conn);
-
-
+?>

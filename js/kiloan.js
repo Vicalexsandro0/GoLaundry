@@ -105,7 +105,19 @@ document.addEventListener('DOMContentLoaded', function() {
             categorySelect.addEventListener('change', function() {
                 const itemSelect = categorySelect.nextElementSibling;
                 const category = categorySelect.value;
-                fetchItems(category, itemSelect); // Fetch items for the selected category
+                fetchItems(category, itemSelect);
+                const quantityInput = itemSelect.nextElementSibling.nextElementSibling;
+                if (category === 'Min 3 kg') {
+                    quantityInput.min = 3;
+                    quantityInput.value = 3;
+                } else {
+                    quantityInput.min = 1;
+                    quantityInput.value = 1;
+                }
+                
+                
+                
+                
             });
             categorySelect.dispatchEvent(new Event('change')); // Trigger change event initially
         });
@@ -137,7 +149,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const itemSelect = orderForm.querySelector('.item');
         categorySelect.addEventListener('change', function() {
             const category = categorySelect.value;
-            fetchItems(category, itemSelect); // Fetch items for the selected category
+            fetchItems(category, itemSelect); 
+            
+            const quantityInput = itemSelect.nextElementSibling.nextElementSibling;
+            if (category === 'Min 3 kg') {
+                quantityInput.min = 3;
+                quantityInput.value = 3;
+            } else {
+                quantityInput.min = 1;
+                quantityInput.value = 1;
+            }
         });
         categorySelect.dispatchEvent(new Event('change')); // Trigger change event initially
 
@@ -150,6 +171,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const itemSelect = this.nextElementSibling;
         const category = this.value;
         fetchItems(category, itemSelect); // Fetch items for the selected category
+
+        const quantityInput = itemSelect.nextElementSibling.nextElementSibling;
+        if (category === 'Min 3 kg') {
+            quantityInput.min = 3;
+            quantityInput.value = 3;
+        } else {
+            quantityInput.min = 1;
+            quantityInput.value = 1;
+        }
     }
 
     // Handle change event for initial form
@@ -178,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Memasukkan kategori barang satuan
+// Memasukkan kategori barang
 document.addEventListener('DOMContentLoaded', function() {
     fetch('fetch_kiloan.php')
         .then(response => response.json())
@@ -195,6 +225,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     selectElement.appendChild(option);
                 });
             }
+
+
+
+            orderForms.addEventListener('change', function (event) {
+                const orderForm = event.target.closest('.order-form');
+                const categorySelect = orderForm.querySelector('.category');
+                const quantityInput = orderForm.querySelector('.quantity');
+                const minQuantity = categorySelect.value === 'Min 3 kg' ? 3 : 1; // Minimum is 3 for "Min 3 kg", 1 for others
+            
+                if (quantityInput.value < minQuantity) {
+                  quantityInput.value = minQuantity; // Set minimum quantity if entered value is less
+                  alert(`Minimum quantity for "${categorySelect.value}" is ${minQuantity}.`);
+                }
+            });
 
             // Function to initialize category dropdowns
             function initializeCategoryDropdowns() {
@@ -216,6 +260,8 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('addItem').addEventListener('click', function() {
                 const orderForm = document.querySelector('.order-form').cloneNode(true);
                 orderForm.querySelector('.quantity').value = 1;
+
+                
                 
                 // Get selected category from original form
                 const selectedCategory = document.querySelector('.category').value;

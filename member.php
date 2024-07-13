@@ -58,11 +58,6 @@
                 <div class="error-message"></div>
             </div>
             <div class="inputBox">
-                <span>NIK :</span>
-                <input type="tel" id="nik" name="nik" placeholder="isi NIKmu" pattern="[0-9]{16}" required>
-                <div id="nik-error" class="error-message"></div>
-            </div>
-            <div class="inputBox">
                 <span>no. hp :</span>
                 <input type="tel" name="no_hp" id="phone" placeholder="isi no.hpmu" pattern="[0-9]{12}" required>
                 <div class="error-message"></div>
@@ -70,16 +65,6 @@
             <div class="inputBox">
                 <span>alamat :</span>
                 <input type="text" name="alamat" placeholder="isi alamatmu" required>
-                <div class="error-message"></div>
-            </div>
-            <div class="inputBox">
-                <span>email :</span>
-                <input type="email" name="email" placeholder="email" required>
-                <div class="error-message"></div>
-            </div>
-            <div class="inputBox">
-                <span>upload KTP :</span>
-                <input type="file" name="ktp" required>
                 <div class="error-message"></div>
             </div>
         </div>

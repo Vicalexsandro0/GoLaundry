@@ -1,13 +1,18 @@
+<?php
+
+date_default_timezone_set("Asia/Bangkok");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go Laundry</title>
-    <link rel="stylesheet" href="css/satuan.css">
+    <link rel="stylesheet" href="css/sukses_pesan.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <style>
     body {
@@ -34,58 +39,21 @@
         </a>
     </nav>
 
+
     <div id="menu-btn" class="fas fa-bars"></div>
 
     </section>
 
-    <form id="orderForm" method="post" action="submit_orderkiloan.php">
-    <div class="container">
+  
     
-    <section class="customer-data">
-        <h1>Order Form</h1>
-        <form id="orderForm">
-        <label>nomor member:</label>
-        <input type="text" id="member_number" name="member_number">
-        <button type="button" onclick="GetDetail()">Check Member</button> <br><br>
-
-        <label>nama depan:</label>
-        <input type="text" name="first_name" id="first_name" required><br><br>
-
-        <label>Nama belakang:</label>
-        <input type="text" id="last_name" name="last_name"><br><br>
-
-        <label>Nomor Handphone:</label>
-        <input type="text" id="phone_number" name="phone_number" required><br><br>
-
-        <label for="address">Alamat:</label>
-        <textarea id="address" name="address" rows="4"></textarea><br><br>
-    </section>
-
-    <section class="order-section">
-    <div id="orderForms">
-        <div class="order-form">
-            <label for="category">kategori:</label>
-            <select class="category" name="category">
-                    <?php include("get_categorykiloan.php"); ?>
-                </select><br>
-                <label for="item"></label>
-                <select class="item" name="item">
-                <?php include("get_itemkiloan.php");?>
-                </select><br>
-
-            <label for="quantity">kuantitas (kg):</label>
-            <input type="number" class="quantity" name="quantity" min="1" value="1"><br><br>
-            <input type="hidden" id="total_payment" name="total_payment">
-
-    <button type="submit" id="submitOrder">Order</button>
-        </div>
+    <section class="member">
+        <div class="message-box">
+        <h1>Pemesanan anda tidak berhasil. Coba lagi.</h1>
+        <button class="kembali" onclick="window.location.href='Pemesanan.php'"> Kembali </button>
     </div>
-    
-    
- </section>
- </div>
- </form>
 
+
+    </section>
     <section class="footer">
         <div class="box-container">
             <div class="box">
@@ -107,13 +75,9 @@
         <div class="copyright">
             <span>copyright &copy; Go Laundry</span>
         </div>
-    </section>  
-
+    </section>    
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script src="js/kiloan.js"></script>
-<script src= "https://code.jquery.com/jquery-3.2.1.min.js"></script> 
-<script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script> 
-
+<script src="js/member.js"></script>
 
 </body>
 </html>

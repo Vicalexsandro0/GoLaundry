@@ -29,7 +29,7 @@ date_default_timezone_set("Asia/Bangkok");
         <a href="harga.php">harga</a>
         <a href="pemesanan.php">pemesanan</a>
         <a href="member.php">member</a>
-        <a href="about.php">tentang kami</a>
+        <a href="kontak.php">kontak</a>
         <a class='fas fa-bell'Notification Icon id="notif-icon">
         </a>
         <a class="promo-dropdown" id="promo-dropdown">
@@ -48,7 +48,7 @@ date_default_timezone_set("Asia/Bangkok");
     
     <section class="member">
         <div class="message-box">
-        <h1>Pemesanan Anda berhasil di proses Mohon menunggu hingga pesanan Anda selesai</h1>
+        <h1>Pemesanan Anda berhasil di proses. Mohon menunggu hingga pesanan Anda selesai. Proses pembayaran akan dilanjutkan di WA <a href="https://wa.me/628999826888">GoLaundry</a>.</h1>
         <button class="kembali" onclick="window.location.href='Pemesanan.php'"> Kembali </button>
     </div>
 
