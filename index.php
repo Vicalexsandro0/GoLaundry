@@ -26,6 +26,8 @@
             <p>Dapatkan diskon hingga 50% untuk pelanggan member baru   </p>
         </a>
     </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
 </section>
 
     <section class="home">
