@@ -44,7 +44,7 @@
     <section class="customer-data">
         <h1>Order Form</h1>
         <form id="orderForm">
-        <label>nomor member:</label>
+        <label>nomor member(jika tidak ada member isi 000000):</label>
         <input type="text" id="member_number" name="member_number">
         <button type="button" onclick="GetDetail()">Check Member</button> <br><br>
 
