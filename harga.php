@@ -119,6 +119,6 @@
             </div>
         </section>    
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/harga.js"></script>
 </body>
 </html>

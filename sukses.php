@@ -77,7 +77,7 @@ date_default_timezone_set("Asia/Bangkok");
         </div>
     </section>    
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script src="js/member.js"></script>
+<script src="js/harga.js"></script>
 
 </body>
 </html>

@@ -19,28 +19,28 @@ date_default_timezone_set("Asia/Bangkok");
   }
   </style>
 <body>
-    <section class="header">
+<section class="header">
 
-    <a href="index.php" class = "logo"><img src="assets/Group 2.png" alt="GoLaundry"></a>
+<a href="index.php" class = "logo"><img src="assets/Group 2.png" alt="GoLaundry"></a>
 
-    <nav class="navbar">
-        <a href="index.php">beranda</a>
-        <a href="harga.php">harga</a>
-        <a href="pemesanan.php">pemesanan</a>
-        <a href="member.php">member</a>
-        <a href="kontak.php">kontak</a>
-        <a class='fas fa-bell'Notification Icon id="notif-icon">
-        </a>
-        <a class="promo-dropdown" id="promo-dropdown">
-            <span class="close-btn">&times;</span>
-            <h2>Promo Spesial!</h2>
-            <p>Dapatkan diskon hingga 50% untuk pelanggan member baru   </p>
-        </a>
-    </nav>
+<nav class="navbar">
+    <a href="index.php">beranda</a>
+    <a href="harga.php">harga</a>
+    <a href="pemesanan.php">pemesanan</a>
+    <a href="member.php">member</a>
+    <a href="kontak.php">kontak</a>
+    <a class='fas fa-bell'Notification Icon id="notif-icon">
+    </a>
+    <a class="promo-dropdown" id="promo-dropdown">
+        <span class="close-btn">&times;</span>
+        <h2>Promo Spesial!</h2>
+        <p>Dapatkan diskon hingga 50% untuk pelanggan member baru   </p>
+    </a>
+</nav>
 
-    <div id="menu-btn" class="fas fa-bars"></div>
+<div id="menu-btn" class="fas fa-bars"></div>
 
-    </section>
+</section>
 
 <section class="media-sosial">
     <div class="maps">
@@ -77,7 +77,7 @@ date_default_timezone_set("Asia/Bangkok");
         </div>
     </section>    
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script src="js/script.js"></script>
+<script src="js/harga.js"></script>
 
 </body>
 </html>
